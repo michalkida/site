@@ -146,8 +146,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [umamiAnalytics]
   websiteid = "dab1c7a2-9ebc-457a-9db7-7c8fefc1da30"
-  domain = "kidami.xyz/api/collect"
-  # dataDomains = "yoursite.com,yoursite2.com"
+  domain = "kidami.xyz/api"
   scriptName = "my-analytics.js"
   enableTrackEvent = true
 
