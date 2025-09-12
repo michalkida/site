@@ -8,6 +8,31 @@ tags = ['Caddy', 'Security', 'WAF', 'Crowdsec', 'Docker']
 {{< lead >}}
 And find out how scary exposing services can be.
 {{< /lead >}}
+## Intro
+
+When you start exposing services from your homelab to the internet, security quickly becomes a serious concern. Every open port is a potential attack vector, and automated bots are constantly scanning for vulnerabilities. That’s where Caddy, CrowdSec, and Cloudflare come in — together they form a powerful, layered security setup that protects your apps while still making them accessible.
+
+Here’s what each component does and why it matters:
+
+Cloudflare – acts as a shield between the internet and your server. It hides your IP address, absorbs DDoS attacks, and filters out a huge amount of bad traffic before it even reaches you.
+
+Caddy – a modern, easy-to-use web server and reverse proxy that automatically handles HTTPS, SSL certificates and routes traffic to your services. With the right plugins, it can also talk to CrowdSec to block malicious requests in real time.
+
+CrowdSec – a collaborative intrusion prevention system (like Fail2Ban on steroids) that analyzes logs from your services, detects malicious behavior, and shares information about bad actors with the community.
+
+AppSec (WAF) – an optional CrowdSec component that acts as a Web Application Firewall (WAF), inspecting requests and dropping suspicious payloads before they can reach your apps.
+
+By combining these tools, you get:
+
+✅ Real-time protection – CrowdSec can block known bad IPs globally and react immediately to malicious traffic.
+
+✅ Log-driven detection – Instead of relying on static IP lists, it monitors what’s happening in your logs and bans attackers dynamically.
+
+✅ Layered security – Cloudflare stops most noise, CrowdSec catches what gets through, and Caddy enforces the blocks.
+
+✅ Easy observability – You can track attacks, ban durations, and get Discord notifications when something happens.
+
+In short, this setup gives you peace of mind when self-hosting: you stay in control of what’s exposed, you can still access everything securely, and you significantly reduce your attack surface without relying solely on obscurity.
 
 ## Basic Setup
 
