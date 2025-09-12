@@ -14,13 +14,13 @@ When you start exposing services from your homelab to the internet, security qui
 
 Here’s what each component does and why it matters:
 
-Cloudflare – acts as a shield between the internet and your server. It hides your IP address, absorbs DDoS attacks, and filters out a huge amount of bad traffic before it even reaches you.
+**Cloudflare** – acts as a shield between the internet and your server. It hides your IP address, absorbs DDoS attacks, and filters out a huge amount of bad traffic before it even reaches you.
 
-Caddy – a modern, easy-to-use web server and reverse proxy that automatically handles HTTPS, SSL certificates and routes traffic to your services. With the right plugins, it can also talk to CrowdSec to block malicious requests in real time.
+**Caddy** – a modern, easy-to-use web server and reverse proxy that automatically handles HTTPS, SSL certificates and routes traffic to your services. With the right plugins, it can also talk to CrowdSec to block malicious requests in real time.
 
-CrowdSec – a collaborative intrusion prevention system (like Fail2Ban on steroids) that analyzes logs from your services, detects malicious behavior, and shares information about bad actors with the community.
+**CrowdSec** – a collaborative intrusion prevention system (like Fail2Ban on steroids) that analyzes logs from your services, detects malicious behavior, and shares information about bad actors with the community.
 
-AppSec (WAF) – an optional CrowdSec component that acts as a Web Application Firewall (WAF), inspecting requests and dropping suspicious payloads before they can reach your apps.
+**AppSec** (WAF) – an optional CrowdSec component that acts as a Web Application Firewall (WAF), inspecting requests and dropping suspicious payloads before they can reach your apps.
 
 By combining these tools, you get:
 
