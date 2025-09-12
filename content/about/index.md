@@ -50,4 +50,5 @@ Proposed a <strong>novel framework for lightweight and automated attack attribut
 
 {{< /timeline >}}
 
-## CV
+## Credits
+Thanks to [**Hugo**](https://gohugo.io/) & the awesome [**Blowfish**](https://blowfish.page/) theme (plus the person that found it!) for making this site happen.
