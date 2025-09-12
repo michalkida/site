@@ -23,6 +23,7 @@ Below is the original and dated project summary for archival purposes.
 
 ## Project Summary
 <p>The project involved creating a personal website to showcase personal and professional information, including skills, experiences, and projects, as well as learning new or improving existing skills such as NoSQL, JavaScript, Django. In my current role I mostly focus on backend work so here I was able to take on the role of a full stack engineer!</p>
+
 ### Frameworks and Technologies:
 <ul>
   <li>

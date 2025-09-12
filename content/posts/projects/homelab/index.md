@@ -1,5 +1,5 @@
 +++
-date = '2025-09-11T00:01:11+02:00'
+date = '2023-11-18T00:00:00+02:00'
 draft = false
 title = 'Reviving an Old Office PC into an UNRAID Server'
 categories = ['Projects', 'Homelab']

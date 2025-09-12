@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "kidami"
+title = "kidami.xyz"
 
 [params]
   displayName = "EN"
@@ -15,11 +15,11 @@ title = "kidami"
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
-  name = "Michal Kida"
+  name = "Michał Kida"
   email = "michalkida2@gmail.com"
-  image = "img/blowfish_logo.png"
+  image = "images/author.jpg"
   imageQuality = 96
-  headline = "Headline? no head?"
+  # headline = ""
   # bio = "A little bit about you"
   links = [
 #     { email = "mailto:hello@your_domain.com" },
@@ -45,7 +45,7 @@ title = "kidami"
 #     { keyoxide = "https://keyoxide.org/URI" },
 #     { kickstarter = "https://www.kickstarter.com/profile/username" },
 #     { lastfm = "https://lastfm.com/user/username" },
-#     { linkedin = "https://linkedin.com/in/username" },
+    { linkedin = "https://linkedin.com/in/michalkida" },
 #     { mastodon = "https://mastodon.instance/@username" },
 #     { matrix = "https://matrix.to/#/URI" },
 #     { medium = "https://medium.com/username" },

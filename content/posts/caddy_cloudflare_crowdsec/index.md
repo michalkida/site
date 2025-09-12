@@ -1,6 +1,6 @@
 +++
 date = '2025-04-20T00:00:00+02:00'
-draft = true
+draft = false
 title = 'How To Set Up Caddy With Crowdsec Behind a Cloudflare Proxy'
 categories = ['Homelab']
 tags = ['Caddy', 'Security', 'WAF', 'Crowdsec', 'Docker']
@@ -13,7 +13,7 @@ And find out how scary exposing services can be.
 
 ### 1. Building Caddy With The Right Dependencies {#setup}
 You'll need a few things to get this to work:
-```
+```dockerfile
 FROM caddy:2.9.1-builder-alpine AS builder
 
 RUN xcaddy build \
@@ -36,7 +36,7 @@ Crowdsec works by parsing logs. So you'll wanna set caddy up to actually generat
 The way I did this is to have a function you can import with an argument defining the name of the log:
 
 Caddyfile:
-```
+```caddy
 # Logging Config
 (logging) {
 	log {
@@ -47,7 +47,7 @@ Caddyfile:
 Check the output on your end to whatever you've got mapped on docker side of things.
 
 Then import this in your service and pass in an arg for the name of the file. Makes it super easy to differentiate logs:
-```
+```caddy
 # me.kidami.xyz
 me.kidami.xyz {
 	import logging me.kidami.xyz
@@ -55,7 +55,7 @@ me.kidami.xyz {
 }
 ```
 Do this for all your services and you'll have nicely split log files:
-```
+```sh
 root@HomeServer:/mnt/user/appdata/caddy/logs# ls
 access.log                  immich.kidami.xyz.access.log  scrumptious.kidami.xyz.access.log
 auth.kidami.xyz.access.log  me.kidami.xyz.access.log      wiki.kidami.xyz.access.log
@@ -68,14 +68,14 @@ Only a few things you need to change from defaults:
 2. I changed the 'auth logs to analyze' field and mapped it to `/var/log/caddy` within the container and `/mnt/user/appdata/caddy/logs/` locally to give crowdsec easy access to caddy logs. By default this comes mapped to a single file.
 
 You then need to activate the bouncer and generate an API key by running the following in the crowdsec container:
-```
+```sh
 cscli bouncers add caddy-bouncer
 ```
 
 Save this API key and put it in caddy's docker-compose env.
 
 Now we need to tell crowdsec where to look for the logs. Luckily this is pretty simple - in crowdsec's appdata folder modify `acquis.yaml`. The important things here are the types. This is what the caddy collection was for.
-```
+```yaml
 filenames:
  - /syslog
 labels:
@@ -91,7 +91,7 @@ The crowdsec docker container will raise warnings if this wasn't set up correctl
 
 ### 4. Adding Crowdsec To Caddy
 In your Caddyfile's global config (the very top one!)
-```
+```caddy
 order crowdsec first
 crowdsec {
 	api_url http://<IP>:8081
@@ -101,7 +101,7 @@ crowdsec {
 ```
 
 Optional - add this if you are proxied behind CF:
-```
+```caddy
 	servers {
 		trusted_proxies cloudflare {
 			interval 12h
@@ -110,7 +110,7 @@ Optional - add this if you are proxied behind CF:
 ```
 
 Finally, add this to every service you want to put behind crowdsec:
-```
+```caddy
 me.kidami.xyz {
 	route {
 		crowdsec
@@ -127,7 +127,7 @@ If caddy doesn't immediately kill itself you should be seeing logs in the crowds
 This shows that the caddy bouncer is working and getting decisions.
  
 To test that it actually works, exec into the crowdsec container and do:
- ```
+ ```sh
  cscli decisions add --ip <IP>
  ```
 Give it a few seconds to take action and any domain you've put behind crowdsec should now be inacessible by that IP.
@@ -136,18 +136,18 @@ If this is not the case check the access logs and see if the actual request IP m
 Other useful commands:
 
 Checking/removing decisions:
-```
+```sh
 cscli decisions list
 cscli decisions delete --ip <IP>
 ```
 
 Checking log parsing:
-```
+```sh
 cscli explain --file /var/log/caddy/xxx.access.log --type caddy
 ```
 
 Adding scenarios/collections:
-```
+```sh
 cscli collections install crowdsecurity/base-http-scenarios
 ```
 
@@ -157,7 +157,7 @@ Make sure you've built the caddy server with the appsec component in the [initia
 
 ### 2. Modify acquis.yaml
 Add the following, choosing a port of your choice:
-```
+```yaml
 listen_addr: 0.0.0.0:7422
 appsec_config: crowdsecurity/appsec-default
 name: myAppSecComponent
@@ -171,7 +171,7 @@ You will have to expose this port in your crowdsec docker container.
 {{< /alert >}}
 
 ### 3. Install Some Appsec Rules
-```
+```sh
 cscli collections install crowdsecurity/appsec-virtual-patching
 cscli collections install crowdsecurity/appsec-generic-rules
 ```
@@ -186,7 +186,7 @@ INFO[2023-12-05 09:16:31] Starting Appsec server on 0.0.0.0:7422/     type=appse
 
 ### 4. Configure Appsec In Caddyfile
 Add appsec clause and URL:
-```
+```caddy
 	crowdsec {
 		api_url http://<IP>:8081
 		appsec_url http://<IP>:7422
@@ -196,7 +196,7 @@ Add appsec clause and URL:
 ```
 
 Add appsec directive to domains you want to protect:
-```
+```caddy
 me.kidami.xyz {
   route {
   	appsec
@@ -217,12 +217,12 @@ Try to access an appsec connected domain and add `/rpc2` to the end of the URL. 
 ## Further Crowdsec Config
 ### [profiles.yaml](https://docs.crowdsec.net/u/getting_started/post_installation/profiles/) {#profiles}
 You can change the ban times here and filters which decide which alerts receive bans, eg:
-```
+```yaml
 filters:
  - Alert.Remediation == true && Alert.GetScope() == "Ip"
 ```
 Would ban alerts triggered by an IP address only if the alert calls for a remediation
-```
+```yaml
 filters:
  - Alert.GetScope() == "Ip"
 ```
@@ -235,7 +235,7 @@ You can also link each remediation to a notification agent such as discord.
 
 Place in `appdata/crowdsec/notifications/discord.yaml'
 
-```
+```yaml
 type: http
 name: discord
 log_level: info
