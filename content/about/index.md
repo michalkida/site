@@ -20,6 +20,12 @@ Stick around if you’re into self-hosting, programming side projects, or just w
 
 I might even start writing about my garage or outdoors adventures, coming soon:tm: (you know what soon:tm: means, right?)
 
+To see all my posts, [click here.](/posts)
+
+To see some of my dev related projects, [click here.](/projects)
+
+For my professional experiences, scroll down.
+
 ## Professional Experience
 
 {{< timeline >}}
