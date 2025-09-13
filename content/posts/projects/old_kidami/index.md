@@ -2,8 +2,9 @@
 date = '2023-11-19T00:00:00+02:00'
 draft = false
 title = 'Personal Website (Old Django Version)'
+description = 'A retrospective of my old Django-based personal website: design, lessons learned, and what changed.'
 categories = ['Projects']
-tags = ['Unraid', 'Website', 'Django', 'Python']
+tags = ['Unraid', 'Website', 'Django', 'Python', 'Web Development']
 +++
 {{< lead >}}
 This is my old website which I originally built to get familiar with Django and spice up the CV.

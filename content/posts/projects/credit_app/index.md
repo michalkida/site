@@ -2,6 +2,8 @@
 date = '2024-04-04T00:00:00+02:00'
 draft = false
 title = 'Credit App'
+description = 'Overview of building a credit app as a part of a take home interview: architecture, challenges, and implementation details.'
+tags = ['Backend', 'Django', 'Software Development', 'Python']
 categories = ['Projects']
 +++
 Django & Python web app designed to handle credit policies, developed over a weekend as part of a take home interview project for a company. Includes a Django REST API and database integration.

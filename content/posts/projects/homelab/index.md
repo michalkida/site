@@ -2,8 +2,9 @@
 date = '2023-11-18T00:00:00+02:00'
 draft = false
 title = 'Reviving an Old Office PC into an UNRAID Server'
+description = 'Transforming an old office PC into an Unraid server — hardware upgrades, setup process, and usage tips.'
 categories = ['Projects', 'Homelab']
-tags = ['Docker', 'Unraid']
+tags = ['Docker', 'Unraid', 'Server', 'DIY']
 +++
 {{< lead >}}
 And diving into self-hosting.

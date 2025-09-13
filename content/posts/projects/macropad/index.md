@@ -2,8 +2,9 @@
 date = '2024-05-15T00:00:00+02:00'
 draft = false
 title = 'Programmable Raspberry Pi Numpad'
+description = 'Building a programmable Raspberry Pi numpad: hardware setup, software configuration, and sample use cases.'
 categories = ['Projects']
-tags = ['Python', '3D Printing']
+tags = ['Python', '3D Printing', 'DIY', 'Raspberry Pi']
 +++
 {{< lead >}}
 Featuring: Bongo Cat

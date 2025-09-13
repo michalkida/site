@@ -2,8 +2,9 @@
 date = '2025-04-20T00:00:00+02:00'
 draft = false
 title = 'How To Set Up Caddy With Crowdsec Behind a Cloudflare Proxy'
+description = 'Step-by-step guide to securing a site using Caddy + CrowdSec behind Cloudflare proxy, with configuration tips for improved protection.'
 categories = ['Homelab']
-tags = ['Caddy', 'Security', 'WAF', 'Crowdsec', 'Docker']
+tags = ['Caddy', 'Security', 'WAF', 'Crowdsec', 'Docker', 'Tutorial', 'Self Hosting']
 +++
 {{< lead >}}
 And find out how scary exposing services can be.
