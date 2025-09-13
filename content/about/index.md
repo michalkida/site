@@ -22,7 +22,7 @@ I might even start writing about my garage or outdoors adventures, coming soon:t
 
 To see all my posts, [click here.](/posts)
 
-To see some of my dev related projects, [click here.](/projects)
+To see some of my dev related projects, [click here.](/categories/projects/)
 
 For my professional experiences, scroll down.
 
