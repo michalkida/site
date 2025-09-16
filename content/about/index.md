@@ -30,28 +30,34 @@ For my professional experiences, scroll down.
 
 {{< timeline >}}
 
-{{< timelineItem icon="briefcase" header="Software Engineer II" subheader="Anomali" badge="2022 - Present">}}
-<p>Helped <strong>move a huge production codebase from Python 2 → Python 3</strong>, keeping things running smoothly while making them faster and more capable.</p>
-<p>Led a <strong>major upgrade of our cache database format</strong>, which sped up execution times and cut storage needs way down.</p>
-<p>Built a <strong>fast intelligence scraping engine</strong> that shipped ahead of schedule and made customers happy.</p>
-<p>Gave the <strong>ThreatStream Splunk app</strong> a big refresh — it’s now the most popular threat intel app on Splunkbase.</p>
-<p>Rolled out <strong>better workflows with Jira and GitHub</strong>, plus wrote automation to make PRs, reviews, and testing way less painful.</p>
-<p>These days, I’m focused on <strong>vendor integrations with Google</strong>, improving our <strong>cache logic</strong>, building out <strong>GitHub Actions workflows</strong>, and <strong>automating monitoring for our threat intelligence feeds</strong> so we catch issues faster.</p>
+{{< timelineItem icon="briefcase" header="Software Engineer II" subheader="Anomali" badge="2022 - Present" md="true">}}
+Helped **move a huge production codebase from Python 2 → Python 3**, keeping things running smoothly while making them faster and more capable.
+
+Led a **major upgrade of our cache database format**, which sped up execution times and cut storage needs way down.
+
+Built a **fast intelligence scraping engine** that shipped ahead of schedule and made customers happy.
+
+Gave the **ThreatStream Splunk app** a big refresh — it’s now the most popular threat intel app on Splunkbase.
+
+Rolled out **better workflows with Jira and GitHub**, plus wrote automation to make PRs, reviews, and testing way less painful.
+
+These days, I’m focused on **vendor integrations with Google**, improving our **cache logic**, building out **GitHub Actions workflows**, and **automating monitoring for our threat intelligence feeds** so we catch issues faster.
 {{< /timelineItem >}}
 
-{{< timelineItem icon="graduation-cap" header="MEng Software Engineering" subheader="First Class Honours" badge="2022">}}
+{{< timelineItem icon="graduation-cap" header="MEng Software Engineering" subheader="First Class Honours" badge="2022" md="true">}}
 Graduated from Queen's University Belfast
 {{< /timelineItem >}}
 
-{{< timelineItem icon="book" header="Researcher" subheader="Queen's University Belfast" badge="2021 - 2022">}}
-Proposed a <strong>novel framework for lightweight and automated attack attribution</strong> using <strong>fuzzy hashes as natural language input</strong> for machine learning classifiers. Achieved an average <strong>accuracy and F1-score of 89% and 87.5%</strong> for country and APT group classification, while <strong>significantly reducing processing time</strong> compared to existing solutions.
+{{< timelineItem icon="book" header="Researcher" subheader="Queen's University Belfast" badge="2021 - 2022" md="true">}}
+Proposed a **novel framework for lightweight and automated attack attribution** using **fuzzy hashes as natural language input** for machine learning classifiers. Achieved an average **accuracy and F1-score of 89% and 87.5%** for country and APT group classification, while **significantly reducing processing time** compared to existing solutions.
 
-<p><a  target="_blank" href="https://ieeexplore.ieee.org/document/10004581">Nation-State Threat Actor Attribution Using Fuzzy Hashing (ieee.org)<link></a></p>
+[Nation-State Threat Actor Attribution Using Fuzzy Hashing (ieee.org)](https://ieeexplore.ieee.org/document/10004581)
 {{< /timelineItem >}}
 
-{{< timelineItem icon="school" header="Student Demonstrator" subheader="Queen's University Belfast" badge="2021 - 2022">}}
-<p>Contributed to <strong>teaching</strong> two first-year modules: a <strong>Java programming</strong> module and <strong>Fundamentals of Mathematics</strong> for Computing.</p>
-<p>Responsibilities also included facilitating <strong>practical sessions, grading assignments, and proctoring tests</strong>.</p>
+{{< timelineItem icon="school" header="Student Demonstrator" subheader="Queen's University Belfast" badge="2021 - 2022" md="true">}}
+Contributed to **teaching** two first-year modules: a **Java programming** module and **Fundamentals of Mathematics** for Computing.
+
+Responsibilities also included facilitating **practical sessions, grading assignments, and proctoring tests**.
 {{< /timelineItem >}}
 
 {{< /timeline >}}
