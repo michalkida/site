@@ -1,0 +1,39 @@
+/* Catppuccin Mocha scheme */
+:root {
+  /* Neutral (Grays: surfaces, text, overlays) */
+  --color-neutral: 205, 214, 244; /* Text (lightest neutral for primary text) */
+  --color-neutral-50: 205, 214, 244; /* Text */
+  --color-neutral-100: 186, 194, 222; /* Subtext 1 */
+  --color-neutral-200: 166, 173, 200; /* Subtext 0 */
+  --color-neutral-300: 147, 153, 178; /* Overlay 2 */
+  --color-neutral-400: 127, 132, 156; /* Overlay 1 */
+  --color-neutral-500: 108, 112, 134; /* Overlay 0 */
+  --color-neutral-600: 88, 91, 112; /* Surface 2 */
+  --color-neutral-700: 69, 71, 90; /* Surface 1 */
+  --color-neutral-800: 49, 50, 68; /* Surface 0 */
+  --color-neutral-900: 30, 30, 46; /* Mantle/Base (darkest) */
+
+  /* Primary (Blues: core accents) */
+  --color-primary-50: 180, 190, 254; /* Lavender */
+  --color-primary-100: 137, 180, 250; /* Blue */
+  --color-primary-200: 116, 199, 236; /* Sapphire */
+  --color-primary-300: 137, 220, 235; /* Sky */
+  --color-primary-400: 148, 226, 213; /* Teal */
+  --color-primary-500: 166, 227, 161; /* Green */
+  --color-primary-600: 203, 166, 247; /* Mauve */
+  --color-primary-700: 245, 194, 231; /* Pink */
+  --color-primary-800: 243, 139, 168; /* Red */
+  --color-primary-900: 235, 160, 172; /* Maroon */
+
+  /* Secondary (Additional accents: pinks/reds/peachs) */
+  --color-secondary-50: 245, 224, 220; /* Rosewater */
+  --color-secondary-100: 242, 205, 205; /* Flamingo */
+  --color-secondary-200: 250, 179, 135; /* Peach */
+  --color-secondary-300: 249, 226, 175; /* Yellow */
+  --color-secondary-400: 245, 194, 231; /* Pink (overlap for variety) */
+  --color-secondary-500: 243, 139, 168; /* Red */
+  --color-secondary-600: 235, 160, 172; /* Maroon */
+  --color-secondary-700: 203, 166, 247; /* Mauve */
+  --color-secondary-800: 166, 227, 161; /* Green */
+  --color-secondary-900: 148, 226, 213; /* Teal */
+}
