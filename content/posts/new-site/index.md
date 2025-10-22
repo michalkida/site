@@ -177,4 +177,4 @@ kidami.xyz {
 ```
 
 And voila. A much more robust, yet simpler solution compared to my old site (which you can read about below)
-{{< article link="/posts/projects/old_kidami/" showSummary=true compactSummary=true >}}
+{{< article link="/posts/projects/old-kidami/" showSummary=true compactSummary=true >}}

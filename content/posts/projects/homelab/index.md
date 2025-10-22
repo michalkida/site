@@ -22,7 +22,7 @@ It has been an amazing journey of learning and I can recommmend UNRAID OS to any
 
 Some of my self-hosted services include:
 
-- **kidami.xyz** – ~~you're here~~ you were here! I initially hosted my first overly complicated site on a VM on the server, but decided to make something newer and simpler. You can read more about this [here]({{< relref "../old_kidami.md" >}})
+- **kidami.xyz** – ~~you're here~~ you were here! I initially hosted my first overly complicated site on a VM on the server, but decided to make something newer and simpler. You can read more about this [here]({{< relref "../old-kidami.md" >}})
 - Initially a photo sharing site **Piwigo** which later changed to a photo sharing and backup solution **Immich**.
 - A media server.
 - Multiple game servers.
